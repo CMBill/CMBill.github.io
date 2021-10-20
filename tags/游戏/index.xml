@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>游戏 on Call Me Bill</title>
+    <link>https://cmbill.github.io/tags/%E6%B8%B8%E6%88%8F/</link>
+    <description>Recent content in 游戏 on Call Me Bill</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 06 May 2021 21:38:17 +0000</lastBuildDate><atom:link href="https://cmbill.github.io/tags/%E6%B8%B8%E6%88%8F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CentOS 搭建 Teamspeak3 服务器</title>
+      <link>https://cmbill.github.io/post/2/</link>
+      <pubDate>Thu, 06 May 2021 21:38:17 +0000</pubDate>
+      
+      <guid>https://cmbill.github.io/post/2/</guid>
+      <description>TeamSpeak 是一款优秀的语音软件，尤其是在游戏语音方面。原本笔者一直使用的是大家很常见的 YY 语音，但是 YY 铺天盖地的广告和一堆莫名其妙的直播让人抗拒，使用的时候也不太流畅。随后接触到了 TeamSpeak 这款软件，基础的语音功能十分</description>
+    </item>
+    
+  </channel>
+</rss>
