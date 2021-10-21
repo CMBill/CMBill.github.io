@@ -1,28 +1,29 @@
-<!doctype html><html lang=zh-cn dir=content/zh-cn>
+<!doctype html><html lang=en dir=content/en>
 <head>
 <meta charset=utf-8>
 <meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta http-equiv=content-security-policy content="upgrade-insecure-requests">
-<title> Posts - 一只比尔 </title>
+<title> About - Call Me Bill </title>
 <meta name=keywords content>
 <meta name=author content="CM_Bill">
-<meta property="og:title" content="Posts">
-<meta property="og:site_name" content="一只比尔">
+<meta property="og:title" content="About">
+<meta property="og:site_name" content="Call Me Bill">
 <meta property="og:image" content="/img/author.jpg">
-<meta name=title content="Posts - 一只比尔">
-<meta name=description content="Call Me Bill">
+<meta name=title content="About - Call Me Bill">
+<meta name=description content="About me">
 <link rel="shortcut icon" href=/img/favicon.ico>
 <link rel=apple-touch-icon href=/img/apple-touch-icon.png>
 <link rel=apple-touch-icon-precomposed href=/img/apple-touch-icon.png>
 <link href=//cdn.bootcdn.net/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css rel=stylesheet type=text/css>
+<link href=//cdn.bootcdn.net/ajax/libs/imageviewer/0.1.0/viewer.min.css rel=stylesheet>
 <link href=/css/main.css rel=stylesheet type=text/css>
 <link href=/css/syntax.css rel=stylesheet type=text/css>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-C65NK4DY8T"></script>
 <script type=text/javascript>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-C65NK4DY8T ')</script>
 </head>
 <body itemscope itemtype=http://schema.org/WebPage lang=zh-hans>
-<div class="container one-collumn sidebar-position-left">
+<div class="container one-collumn sidebar-position-left page-home">
 <div class=headband></div>
 <header id=header class=header itemscope itemtype=http://schema.org/WPHeader>
 <div class=header-inner> <div class=site-brand-container>
@@ -36,12 +37,14 @@
 <div class=site-meta>
 <div class=multi-lang-switch>
 <i class="fa fa-fw fa-language" style=margin-right:5px></i>
-<a class=lang-link id=zh-cn href=#>中文</a>
+<a class=lang-link id=zh-cn href=https://cmbill.github.io/about.html>中文</a>
+<span class=lang-line> / </span>
+<a class=lang-link id=en href=#>English</a>
 </div>
 <div class=custom-logo-site-title>
-<a href=/ class=brand rel=start>
+<a href=/en/ class=brand rel=start>
 <span class=logo-line-before><i></i></span>
-<span class=site-title>一只比尔</span>
+<span class=site-title>Call Me Bill</span>
 <span class=logo-line-after><i></i></span>
 </a>
 </div>
@@ -56,22 +59,22 @@
 <nav class=site-nav>
 <ul id=menu class=menu>
 <li class=menu-item>
-<a href=/ rel=section>
-<i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页
+<a href=/en/ rel=section>
+<i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home
 </a>
 </li>
 <li class=menu-item>
-<a href=/post rel=section>
-<i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档
+<a href=/en/post rel=section>
+<i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archive
 </a>
 </li>
-<li class=menu-item>
-<a href=/about.html rel=section>
-<i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于
+<li class="menu-item menu-item-active">
+<a href=/en/about.html rel=section>
+<i class="menu-item-icon fa fa-fw fa-user"></i> <br>About
 </a>
 </li>
 <li class="menu-item menu-item-search">
-<a href=javascript:; class=popup-trigger> <i class="menu-item-icon fa fa-search fa-fw"></i> <br> 搜索</a>
+<a href=javascript:; class=popup-trigger> <i class="menu-item-icon fa fa-search fa-fw"></i> <br> Search</a>
 </li>
 </ul>
 <div class=site-search>
@@ -80,7 +83,7 @@
 <span class=search-icon><i class="fa fa-search"></i> </span>
 <span class=popup-btn-close><i class="fa fa-times-circle"></i></span>
 <div class=local-search-input-wrapper>
-<input autocomplete=off placeholder=搜索关键字... spellcheck=false type=text id=local-search-input autocapitalize=none autocorrect=off>
+<input autocomplete=off placeholder="Enter key words..." spellcheck=false type=text id=local-search-input autocapitalize=none autocorrect=off>
 </div>
 </div>
 <div id=local-search-result></div>
@@ -93,32 +96,22 @@
 <div class=main-inner>
 <div class=content-wrap>
 <div id=content class=content>
-<section id=posts class=posts-collapse>
-<span class=archive-move-on></span>
-<span class=archive-page-counter>
-目前共计 <span class=span-stats-tip>1 </span>篇文章， 请继续努力，加油!
-</span>
-<div class=collection-title>
-<h2 class="archive-year motion-element" id=archive-year-2021>2021</h2>
-</div>
-<article class="post post-type-normal }}" itemscope itemtype=http://schema.org/Article>
+<section id=posts class=posts-expand>
+<article class="post post-type-normal" itemscope itemtype=http://schema.org/Article>
 <header class=post-header>
-<h1 class=post-title>
-<a class=post-title-link href=https://cmbill.github.io/post/2/ itemprop=url>
-<span itemprop=name>CentOS 搭建 Teamspeak3 服务器</span>
+<h1 class=post-title itemprop="name headline" style=font-weight:700>
+<a class=post-title-link href=https://cmbill.github.io/en/about.html itemprop=url>
+About
 </a>
 </h1>
-<div class=post-meta>
-<time class=post-time itemprop=dateCreated datetime=2021-05-06 content="05-06">
-05-06
-</time>
-</div>
 </header>
+<div class=post-body itemprop=articleBody>
+</div>
+<footer class=post-footer>
+<div id=wcomments></div>
+</footer>
 </article>
 </section>
-<nav class=pagination>
-<span class="page-number current">1</span>
-</nav>
 </div>
 </div>
 <div class=sidebar-toggle>
@@ -139,30 +132,24 @@
 </div>
 <nav class="site-state motion-element">
 <div class="site-state-item site-state-posts">
-<a href=/post/>
-<span class=site-state-item-count>1</span>
-<span class=site-state-item-name>日志</span>
+<a href=/en/post/>
+<span class=site-state-item-count>0</span>
+<span class=site-state-item-name>Blogs</span>
 </a>
 </div>
 <div class="site-state-item site-state-categories">
-<a href=/categories/>
+<a href=/en/categories/>
 <span class=site-state-item-count>0</span>
-<span class=site-state-item-name>分类</span>
+<span class=site-state-item-name>Categories</span>
 </a>
 </div>
 <div class="site-state-item site-state-tags">
-<a href=/tags/>
-<span class=site-state-item-count>3</span>
-<span class=site-state-item-name>标签</span>
+<a href=/en/tags/>
+<span class=site-state-item-count>0</span>
+<span class=site-state-item-name>Tags</span>
 </a>
 </div>
 </nav>
-<div class="feed-link motion-element">
-<a href=/post/index.xml rel=alternate type=application/rss+xml target=_blank>
-<i class="fa fa-rss"></i>
-RSS 订阅
-</a>
-</div>
 <div class="links-of-author motion-element">
 <span class=links-of-author-item>
 <a href=https://github.com/CMBill target=_blank title=GitHub>
@@ -180,18 +167,9 @@ Steam
 <div class="tagcloud-of-blogroll motion-element tagcloud-of-blogroll-inline">
 <div class=tagcloud-of-blogroll-title>
 <i class="fa fa-fw fa-tags"></i>
-标签云
+TagCloud
 </div>
 <ul class=tagcloud-of-blogroll-list>
-<li class=tagcloud-of-blogroll-item>
-<a href=/tags/teamspeak3>Teamspeak3</a>
-</li>
-<li class=tagcloud-of-blogroll-item>
-<a href=/tags/%E6%B8%B8%E6%88%8F>游戏</a>
-</li>
-<li class=tagcloud-of-blogroll-item>
-<a href=/tags/%E8%AF%AD%E9%9F%B3>语音</a>
-</li>
 </ul>
 </div>
 </section>
@@ -205,7 +183,7 @@ Steam
 <span class=copyright-year>
 &copy; 2021 - 2021
 </span>
-<span class=copyright-author>一只比尔</span>
+<span class=copyright-author>Call Me Bill</span>
 </div>
 <div class=powered-info>
 <span class=powered-by>
@@ -233,6 +211,9 @@ Theme by - <a class=powered-link href=//github.com/elkan1788/hugo-theme-next tar
 <script type=text/javascript src=/js/affix.js></script>
 <script type=text/javascript src=/js/scrollspy.js></script>
 <script type=text/javascript>function detectIE(){var a=window.navigator.userAgent,b=a.indexOf('MSIE '),c=a.indexOf('Trident/'),d=a.indexOf('Edge/');return b>0||c>0||d>0?-1:1}function getCntViewHeight(){var b=$('#content').height(),a=$(window).height(),c=b>a?b-a:$(document).height()-a;return c}function getScrollbarWidth(){var a=$('<div />').addClass('scrollbar-measure').prependTo('body'),b=a[0],c=b.offsetWidth-b.clientWidth;return a.remove(),c}function registerBackTop(){var b=50,a=$('.back-to-top');$(window).on('scroll',function(){var d,e,f,c,g;a.toggleClass('back-to-top-on',window.pageYOffset>b),d=$(window).scrollTop(),e=getCntViewHeight(),f=d/e,c=Math.round(f*100),g=c>100?100:c,$('#scrollpercent>span').html(g)}),a.on('click',function(){$("html,body").animate({scrollTop:0,screenLeft:0},800)})}function initScrollSpy(){var a='.post-toc',d=$(a),b='.active-current';d.on('activate.bs.scrollspy',function(){var b=$(a+' .active').last();c(),b.addClass('active-current')}).on('clear.bs.scrollspy',c),$('body').scrollspy({target:a});function c(){$(a+' '+b).removeClass(b.substring(1))}}function initAffix(){var a=$('.header-inner').height(),b=parseInt($('.main').css('padding-bottom'),10),c=a+10;$('.sidebar-inner').affix({offset:{top:c,bottom:b}}),$(document).on('affixed.bs.affix',function(){updateTOCHeight(document.body.clientHeight-100)})}function initTOCDimension(){var a,b;$(window).on('resize',function(){a&&clearTimeout(a),a=setTimeout(function(){var a=document.body.clientHeight-100;updateTOCHeight(a)},0)}),updateTOCHeight(document.body.clientHeight-100),b=getScrollbarWidth(),$('.post-toc').css('width','calc(100% + '+b+'px)')}function updateTOCHeight(a){a=a||'auto',$('.post-toc').css('max-height',a)}$(function(){var a=$('.header-inner').height()+10;$('#sidebar').css({'margin-top':a}).show(),$('.site-nav-toggle').on('click',function(){var a=$('.site-nav'),e=$('.toggle'),b='site-nav-on',f='toggle-close',c=a.hasClass(b),g=c?'slideUp':'slideDown',d=c?'removeClass':'addClass';a.stop()[g]('normal',function(){a[d](b),e[d](f)})}),registerBackTop(),initScrollSpy(),initAffix(),initTOCDimension(),$('.sidebar-nav-toc').click(function(){$(this).addClass('sidebar-nav-active'),$(this).next().removeClass('sidebar-nav-active'),$('.'+$(this).next().attr('data-target')).toggle(500),$('.'+$(this).attr('data-target')).toggle(500)}),$('.sidebar-nav-overview').click(function(){$(this).addClass('sidebar-nav-active'),$(this).prev().removeClass('sidebar-nav-active'),$('.'+$(this).prev().attr('data-target')).toggle(500),$('.'+$(this).attr('data-target')).toggle(500)})})</script>
+<script src=//cdn.bootcdn.net/ajax/libs/imageviewer/0.1.0/viewer.min.js></script>
+<script type=text/javascript>$(function(){$('.post-body').viewer()})</script>
+<script type=text/javascript>$(function(){detectIE()>0?$.getScript(document.location.protocol+'//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js',function(){new Waline({el:'#wcomments',visitor:!0,avatar:'wavatar',avatarCDN:'https://sdn.geekzu.org/avatar/',avatarForce:!1,wordLimit:'200',placeholder:' Just do what you want leave here, and don\u0027t forget give your email to make exchange. ^_^ ',requiredFields:['nick','mail'],serverURL:"https://site-api.vercel.app/",lang:"en"})}):$('#wcomments').html('Sorry, Waline plugin doesn\u0027t support IE or Edge, Please swithc to Chrome browser.')})</script>
 <script>(function(){var a=document.createElement('script'),c=window.location.protocol.split(':')[0],b;c==='https'?a.src='https://zz.bdstatic.com/linksubmit/push.js':a.src='http://push.zhanzhang.baidu.com/push.js',b=document.getElementsByTagName("script")[0],b.parentNode.insertBefore(a,b)})()</script>
 </body>
 </html>
