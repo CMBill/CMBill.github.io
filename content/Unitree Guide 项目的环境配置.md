@@ -1,3 +1,5 @@
+# 1 环境配置
+
 ## 0 系统环境
 
 * ~~Ubuntu 18.04 LTS (bionic)~~
@@ -78,7 +80,7 @@ sudo update-alternatives --install /usr/bin/cmake cmake /home/bill/progs/cmake-3
 
 ### 3.1 下载源码
 
-https://github.com/lcm-proj/lcm/releases/tag/v1.5.0
+[Release v1.5.0 · lcm-proj/lcm](https://github.com/lcm-proj/lcm/releases/tag/v1.5.0)
 
 ### 3.2 安装依赖
 
@@ -126,4 +128,20 @@ catkin_make
 sudo apt-get install ros-noetic-move-base-msgs
 ```
 
-‍
+在使用命令 `sudo ./devel/lib/unitree_guide/junior_ctrl`​ 启动控制器时，可能会报错某些动态库 so 文件找不到，需要编辑系统的动态库路径配置文件：
+
+```bash
+sudo vim /etc/ld.so.conf
+```
+
+在其中添加一行：
+
+```conf
+/opt/ros/noetic/lib
+```
+
+编辑保存后，运行以下命令即可生效。
+
+```bash
+sudo ldconfig
+```
