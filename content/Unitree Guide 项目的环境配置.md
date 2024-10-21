@@ -1,17 +1,20 @@
 ## 0 系统环境
 
-* Ubuntu 18.04 LTS (bionic)
+* ~~Ubuntu 18.04 LTS (bionic)~~
+* Ubuntu 20.04.6 LTS (Focal Fossa)
+
+18.04 的 Ubuntu 软件版本过于老旧，多个依赖无法满足版本要求，多种软件无法运行。
 
 ## 1 安装 ROS 1
 
-即 ROS melodic，与 ROS 2 的安装类似。
+在 Ubuntu 20.04 上即 ROS Noetic，与 ROS 2 的安装类似。
 
 ### 1.1 设置 sources.list
 
 可以改为自己常用的镜像站。
 
 ```bash
-sudo sh -c '. /etc/lsb-release && echo "deb https://mirror.nju.edu.cn/ros/ubuntu/ `lsb_release -cs` main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo sh -c 'echo "deb https://mirrors.cernet.edu.cn/ros/ubuntu/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 ```
 
 ### 1.2 设置密钥
@@ -26,33 +29,34 @@ sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31
 
 ```bash
 sudo apt update
-sudo apt install ros-melodic-desktop-full
-sudo apt install python-rosdep
+sudo apt install ros-noetic-desktop-full
 ```
 
-### 1.4 初始化 rosdep
+### 1.4 设置环境
+
+```bash
+echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+```
+
+### 1.5 构建工厂依赖
+
+```bash
+sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
+```
+
+### 1.6 初始化 rosdep
 
 ```bash
 sudo rosdep init
 rosdep update
 ```
 
-### 1.5 设置环境
-
-```bash
-echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
-source ~/.bashrc
-```
-
-### 1.6 构建工厂依赖
-
-```bash
-sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool build-essential
-```
-
 ## 2 安装更高版本的 cmake
 
-unitree_guide 项目以及其需要的 lcm 项目都需要更高版本的 cmake，但是 Ubuntu 18.04 提供的 cmake 是 3.10 版本，无法满足我们的需求，因此需要另外下载 cmake。
+> 如果使用 Ubuntu 18.04 版本，可能需要手动安装更高版本的 cmake，20.04 版本则应该不需要。
+
+  unitree_guide 项目以及其需要的 lcm 项目都需要更高版本的 cmake，但是 Ubuntu 18.04 提供的 cmake 是 3.10 版本，无法满足我们的需求，因此需要另外下载 cmake。
 
 cmake 官网直接提供了打包好的二进制文件，无法直接覆盖安装 deb 包。因此我们将其下载下来后，使用 `update-alternatives`​ 命令来新建一条指向其的命令。
 
