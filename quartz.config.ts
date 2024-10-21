@@ -9,11 +9,12 @@ import * as Plugin from "./quartz/plugins"
 const config: QuartzConfig = {
   configuration: {
     pageTitle: "🪴 一只比尔",
-    pageTitleSuffix: "",
+    pageTitleSuffix: "CallMeBill",
     enableSPA: true,
-    enablePopovers: true,
+    enablePopovers: true, // 弹出窗口预览
     analytics: {
-      provider: "plausible",
+      provider: 'clarity', 
+      projectId: 'om1igedisp' 
     },
     locale: "zh-CN",
     baseUrl: "bill.is-a.dev",
