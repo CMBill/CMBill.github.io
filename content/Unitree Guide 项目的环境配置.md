@@ -56,7 +56,7 @@ rosdep update
 
 > 如果使用 Ubuntu 18.04 版本，可能需要手动安装更高版本的 cmake，20.04 版本则应该不需要。
 
-  unitree_guide 项目以及其需要的 lcm 项目都需要更高版本的 cmake，但是 Ubuntu 18.04 提供的 cmake 是 3.10 版本，无法满足我们的需求，因此需要另外下载 cmake。
+unitree_guide 项目以及其需要的 lcm 项目都需要更高版本的 cmake，但是 Ubuntu 18.04 提供的 cmake 是 3.10 版本，无法满足我们的需求，因此需要另外下载 cmake。
 
 cmake 官网直接提供了打包好的二进制文件，无法直接覆盖安装 deb 包。因此我们将其下载下来后，使用 `update-alternatives`​ 命令来新建一条指向其的命令。
 
@@ -78,7 +78,7 @@ sudo update-alternatives --install /usr/bin/cmake cmake /home/bill/progs/cmake-3
 
 ### 3.1 下载源码
 
-https://github.com/lcm-proj/lcm/
+https://github.com/lcm-proj/lcm/releases/tag/v1.5.0
 
 ### 3.2 安装依赖
 
@@ -123,7 +123,7 @@ catkin_make
 如果报错未找到 `move_base_msgs`​ 包，则先运行
 
 ```bash
-sudo apt-get install ros-melodic-move-base-msgs
+sudo apt-get install ros-noetic-move-base-msgs
 ```
 
 ‍
