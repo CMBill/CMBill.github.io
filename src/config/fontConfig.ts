@@ -7,7 +7,7 @@ export const fontConfig = {
 	// 当前选择的字体，支持多个字体组合
 	selected: ["lxgw-wenkai"],
   // 当前选择的代码字体，留空则使用默认配置（JetBrains Mono Variable）
-	codeSelected: [],
+	codeSelected: ["lxgw-wenkai-mono"],
 
   // 字体列表
   // 推荐使用可靠的 CDN 服务商提供的字体链接，它天然做了按需分片加载，且性能较好
@@ -30,6 +30,14 @@ export const fontConfig = {
       name: "LXGW WenKai",
       src: "https://registry.npmmirror.com/@callmebill/lxgw-wenkai-web/latest/files/style.css",
       family: "LXGW WenKai",
+      display: "swap" as const,
+    },
+
+    "lxgw-wenkai-mono": {
+      id: "lxgw-wenkai-mono",
+      name: "LXGW WenKai Mono",
+      src: "https://registry.npmmirror.com/@callmebill/lxgw-wenkai-web/latest/files/style.css",
+      family: "LXGW WenKai Mono",
       display: "swap" as const,
     },
 
