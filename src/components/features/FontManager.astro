@@ -133,7 +133,7 @@ const codeFontFamilyStyle = generateCodeFontFamilyStyle();
     <style
       set:html={`
     :root {
-      ${fontFamilyStyle ? `--font-family-custom: ${selectedFonts.map((font) => `"${font.family}"`).join(", ")};` : ""}
+      ${fontFamilyStyle ? `--font-family-custom: ${(Array.isArray(fontConfig.selected) ? fontConfig.selected : [fontConfig.selected]).map((id: string) => fontConfig.fonts[id]).filter((f: any) => !!f).map((font: any) => `"${font.family}"`).join(", ")};` : ""}
       ${fontFamilyStyle ? `--font-family-fallback: ${(fontConfig.fallback || []).join(", ")};` : ""}
       ${codeFontFamilyStyle ? `--font-family-code-custom: ${codeFontFamilyStyle};` : ""}
     }
