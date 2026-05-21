@@ -389,6 +389,7 @@ export type FontItem = {
 export type FontConfig = {
 	enable: boolean; // 是否启用自定义字体功能
 	selected: string | string[]; // 当前选择的字体ID，支持单个或多个字体组合
+	codeSelected?: string | string[]; // 当前选择的代码字体ID，支持单个或多个字体组合
 	fonts: Record<string, FontItem>; // 字体库，以ID为键的对象
 	fallback?: string[]; // 全局字体回退列表
 	preload?: boolean; // 是否预加载字体文件以提高性能
