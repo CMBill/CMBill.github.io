@@ -16,9 +16,7 @@ const getSelectedFonts = () => {
 	const codeIds = getIds(fontConfig.codeSelected);
 	const allIds = [...new Set([...bodyIds, ...codeIds])];
 
-	return allIds
-		.map((id) => fontConfig.fonts[id])
-		.filter((font) => font?.src); // 过滤掉系统字体和不存在的字体
+	return allIds.map((id) => fontConfig.fonts[id]).filter((font) => font?.src); // 过滤掉系统字体和不存在的字体
 };
 
 const selectedFonts = getSelectedFonts();
