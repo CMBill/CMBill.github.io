@@ -24,7 +24,7 @@ export function getLqipGradient(
 		// public 图片：key 格式为 public:xxx（去掉开头的 /）
 		const relativePath = src.replace(/^\//, "");
 		const compact = lqips[`public:${relativePath}`] || lqips[relativePath];
-		if (!compact || compact.length !== 18) return undefined;
+		if (compact?.length !== 18) return undefined;
 		const c1 = `#${compact.slice(0, 6)}`;
 		const c2 = `#${compact.slice(6, 12)}`;
 		const c3 = `#${compact.slice(12, 18)}`;
@@ -38,7 +38,7 @@ export function getLqipGradient(
 		lqips[`src:${src}`] ||
 		lqips[fullPath] ||
 		lqips[src];
-	if (!compact || compact.length !== 18) return undefined;
+	if (compact?.length !== 18) return undefined;
 
 	const c1 = `#${compact.slice(0, 6)}`;
 	const c2 = `#${compact.slice(6, 12)}`;
@@ -75,4 +75,43 @@ export function getLqipProps(
 	if (isExternalImage(src)) return { style: "background: var(--muted)" };
 	const style = getLqipStyle(src, basePath, isPublic);
 	return { style: style || `background: ${DEFAULT_GRADIENT}` };
+}
+
+/**
+ * LQIP fade-in：图片加载完成后淡出占位渐变。
+ * 纯函数（本模块被 frontmatter 导入，顶层不能有 DOM 副作用），
+ * 监听器由 layout-init.ts 注册。
+ */
+export function initImageLoadFadeIn(): void {
+	const placeholders =
+		document.querySelectorAll<HTMLElement>(".lqip-placeholder");
+	placeholders.forEach((placeholder) => {
+		const container = placeholder.parentElement;
+		if (!container) return;
+		const img = container.querySelector<HTMLImageElement>("img, picture img");
+		if (!img) return;
+
+		if (img.complete && img.naturalWidth > 0) {
+			img.style.opacity = "1";
+			placeholder.classList.add("loaded");
+		} else {
+			img.addEventListener(
+				"load",
+				() => {
+					img.style.opacity = "1";
+					placeholder.classList.add("loaded");
+				},
+				{ once: true },
+			);
+			img.addEventListener(
+				"error",
+				() => {
+					if (!container.classList.contains("cover-image-container")) {
+						placeholder.classList.add("loaded");
+					}
+				},
+				{ once: true },
+			);
+		}
+	});
 }
